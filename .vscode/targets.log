@@ -1,0 +1,630 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Tue May 31 01:55:08 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+ 
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from `Makefile', line 2)
+TARGET = -Ddarwin 
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+CPPFLAGS = -I/usr/local/opt/openssl@1.1/include
+# environment
+PLATFORMIO_IDE = 2.4.3
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/johnsmith/work/FORTHS/ficl
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 10)
+CFLAGS = $(OPTFLAGS) $(SHFLAGS) $(TARGET) $(MFLAGS)
+# environment
+WALLABY_PRODUCTION = true
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 3)
+SHFLAGS = 
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/n1/14xjpmpd08db_4nmz7_xpk940000gn/T/vscode-ipc-6b78bf9f-bce3-4bb4-92f7-a0f089367600.sock
+# environment
+VSCODE_CWD = /Users/johnsmith/work/FORTHS/cforth-mitch-bradley-github
+# environment
+NO_PROXY = 127.0.0.1
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+NVM_BIN = /Users/johnsmith/.nvm/versions/node/v16.14.1/bin
+# environment
+LaunchInstanceID = 67BD5D17-ACDD-4394-84B5-4983A9A1E43E
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LDFLAGS = -L/usr/local/opt/openssl@1.1/lib
+# makefile (from `Makefile', line 12)
+LIB = ar cr
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# makefile (from `Makefile', line 6)
+LIBM = -lm
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mZVMBQ3O0r/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.gzz6EY2hly/org.xquartz:0
+# environment
+CONDA_EXE = /Users/johnsmith/opt/anaconda3/bin/conda
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/johnsmith/work/FORTHS/ficl
+# makefile (from `Makefile', line 13)
+RANLIB = ranlib
+# environment
+PKG_CONFIG_PATH = /usr/local/opt/openssl@1.1/lib/pkgconfig
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+PYTHONNET_PYDLL = /Users/johnsmith/opt/anaconda3/lib/libpython3.8.dylib
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/johnsmith
+# makefile (from `Makefile', line 5)
+OPTFLAGS = -Os -fomit-frame-pointer -march=native
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/johnsmith/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = johnsmith
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+NVM_CD_FLAGS = -q
+# makefile (from `Makefile', line 17)
+HEADERS = ficlplatform.h ficl.h ficlplatform/unix.h
+# environment
+ZSH = /Users/johnsmith/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from `Makefile', line 19)
+MAJOR = 4
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+PLATFORMIO_PATH = /Users/johnsmith/.platformio/python3/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/opt/openssl@1.1/bin:/Users/johnsmith/opt/anaconda3/bin:/Users/johnsmith/opt/anaconda3/condabin:/usr/local/opt/bzip2/bin:/Users/johnsmith/.nvm/versions/node/v16.14.1/bin:/Users/johnsmith/Library/Python/2.7/bin:/usr/local/sbin:/Users/johnsmith/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+PATH = /usr/local/opt/openssl@1.1/bin:/usr/local/opt/openssl@1.1/bin:/Users/johnsmith/opt/anaconda3/bin:/Users/johnsmith/opt/anaconda3/condabin:/usr/local/opt/bzip2/bin:/Users/johnsmith/.nvm/versions/node/v16.14.1/bin:/Users/johnsmith/Library/Python/2.7/bin:/usr/local/sbin:/Users/johnsmith/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin
+# environment
+SHLVL = 3
+# environment
+ 
+XPC_FLAGS = 0x0
+# makefile (from `Makefile', line 11)
+CC = cc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = johnsmith
+# makefile
+.DEFAULT_GOAL := ficld.exe
+# environment
+TERM_SESSION_ID = 78D7F133-C81A-4FCA-A97D-316DC1482BE4
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# environment
+TERM_PROGRAM = Apple_Terminal
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/n1/14xjpmpd08db_4nmz7_xpk940000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/johnsmith/Library/Application Support/Code/1.67.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 444
+# environment
+NVM_DIR = /Users/johnsmith/.nvm
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.62808379.62808385.CDCF1974-58BC-4447-A88C-4E02BDD349A0
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from `Makefile', line 14)
+STRIP = strip
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /Users/johnsmith/opt/anaconda3/bin/python
+# environment
+SECURITYSESSIONID = 186a4
+# automatic
+^F = $(notdir $^)
+# makefile (from `Makefile', line 20)
+MINOR = 2.0
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# makefile (from `Makefile', line 16)
+OBJECTS = dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o softcore.o stack.o tools.o vm.o primitives.o bit.o lzuncompress.o unix.o utility.o hash.o callback.o word.o curterm.o extras.o bswap.o ficlblas.o xoroshiro128plus.o $(DTOAO)
+# environment
+CONDA_PREFIX = /Users/johnsmith/opt/anaconda3
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 86448
+# environment
+_CE_CONDA = 
+# environment
+VAULT_ADDR = http://127.0.0.1:8200
+# environment
+LANG = C
+# variable set hash-table stats:
+# Load=109/1024=11%, Rehash=0, Collisions=5/145=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777220, inode 63109825): 93 files, no impossibilities.
+
+# 93 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.cxx:
+
+%.o: %.cxx
+#  commands to execute (from `Makefile', line 66):
+	$(CPP) $(CPFLAGS) -c $*.cxx
+	
+
+%.cc:
+
+%.o: %.cc
+#  commands to execute (from `Makefile', line 69):
+	$(CPP) $(CPFLAGS) -c $*.cc
+	
+
+%.c:
+
+%.o: %.c
+#  commands to execute (from `Makefile', line 63):
+	$(CC) $(CFLAGS) -c $*.c
+	
+
+%.o:
+
+# 7 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+ficld.exe: ficlplatform.h ficl.h ficlplatform/unix.h softcore.c main.o libficl.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 23):
+	$(CC) main.o -o $@ -L. -lficl $(LIBM)
+	$(STRIP) -x -S $@
+	size ficld.exe
+	ls -l ficld.exe
+	
+
+# Not a target:
+sysdep.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+dictionary.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.cxx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 66):
+	$(CPP) $(CPFLAGS) -c $*.cxx
+	
+
+# Not a target:
+.cxx:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.cc:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.cc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 69):
+	$(CPP) $(CPFLAGS) -c $*.cc
+	
+
+.SUFFIXES: .cxx .cc .c .o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-31 01:28:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+ficlblas.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+word.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+unix.o: ficlplatform/unix.c ficlplatform.h ficl.h ficlplatform/unix.h
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 50):
+	$(CC) $(CFLAGS) -c ficlplatform/unix.c
+	
+
+clobber: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 79):
+	$(RM) ficld.exe
+	
+
+# Not a target:
+double.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ficl.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+curterm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 63):
+	$(CC) $(CFLAGS) -c $*.c
+	
+
+lib: libficl.so.4.2.0
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ficlplatform/unix.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libficl.a: dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o softcore.o stack.o tools.o vm.o primitives.o bit.o lzuncompress.o unix.o utility.o hash.o callback.o word.o curterm.o extras.o bswap.o ficlblas.o xoroshiro128plus.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 32):
+	$(LIB) libficl.a $(OBJECTS)
+	$(RANLIB) libficl.a
+	
+
+# Not a target:
+softcore.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lzuncompress.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bswap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+utility.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ficlplatform/unix.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+extras.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+prefix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+callback.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 74):
+	$(RM) *.o *.a libficl.*
+	$(RM) ficlplatform.h
+	$(RM) softcore.c
+	
+
+libficl.so.4.2.0: dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o softcore.o stack.o tools.o vm.o primitives.o bit.o lzuncompress.o unix.o utility.o hash.o callback.o word.o curterm.o extras.o bswap.o ficlblas.o xoroshiro128plus.o
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 37):
+	$(CC) -shared -Wl,-soname,libficl.so.$(MAJOR).$(MINOR) \
+	-o libficl.so.$(MAJOR).$(MINOR) $(OBJECTS)
+	ln -sf libficl.so.$(MAJOR).$(MINOR) libficl.so
+	
+
+# Not a target:
+primitives.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+hash.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: main.o ficl.h sysdep.h libficl.so.4.2.0
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 46):
+	$(CC) main.o -o main -L. -lficl $(LIBM)
+	ln -sf libficl.so.$(MAJOR).$(MINOR) libficl.so.$(MAJOR)
+	
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+float.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+softcore.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 42):
+	touch softcore/ficl.fr
+	cd softcore; $(MAKE)
+	
+
+# Not a target:
+search.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ficlplatform.h: Makefile
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 53):
+	$(RM) $@
+	echo "#define FICL_PLATFORM_OS \"`uname`\"" >>$@
+	echo "#define FICL_PLATFORM_ARCHITECTURE \"`uname -m`\"" >>$@
+	
+
+# Not a target:
+xoroshiro128plus.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+tools.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+system.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+stack.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+fileaccess.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=49/1024=5%, Rehash=0, Collisions=12/143=8%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Tue May 31 01:55:08 2022
+
+ 

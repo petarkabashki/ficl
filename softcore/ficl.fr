@@ -1,0 +1,97 @@
+\ ** ficl/softwords/softcore.fr
+\ ** FICL soft extensions
+\ ** John Sadler (john_sadler@alum.mit.edu)
+\ ** September, 1998
+
+
+1 CELLS CONSTANT /CELL
+1 CHARS CONSTANT /CHAR
+
+S" FICL_WANT_FLOAT" ENVIRONMENT? drop CONSTANT FLOATS? IMMEDIATE
+
+S" FICL_WANT_USER" ENVIRONMENT? drop [if]
+
+\ ** Ficl USER variables
+\ ** See words.c for primitive def'n of USER
+
+0 value #user
+
+: +user    \ name ( n1 n2 -- n1+n2 )
+    over + swap user ;
+
+[endif]
+
+
+S" FICL_WANT_MULTITHREADED" ENVIRONMENT? drop [if]
+
+\ ** Ficl multi-threading
+\ ** See extras.c for definitions
+
+: /allot ( n -- )
+    here  over erase  allot ;
+
+: safe-allocate ( n -- )
+    allocate abort" allocate failed" ;
+
+: task \ name ( -- )
+    /task safe-allocate
+    dup construct  value ;
+
+: mutex \ name ( -- )
+    create  here /mutex /allot  mutex-init ;
+
+[endif]
+
+
+
+S" FICL_WANT_LOCALS" ENVIRONMENT? drop [if]
+
+\ ** LOCAL EXT word set
+
+: locals|  ( name...name | -- )
+    begin
+        bl word   count
+        dup 0= abort" where's the delimiter??"
+        over c@
+        [char] | - over 1- or
+    while
+        (local)
+    repeat 2drop   0 0 (local)
+; immediate
+
+: local  ( name -- )  bl word count (local) ;  immediate
+
+: 2local  ( name -- ) bl word count (2local) ; immediate
+
+: end-locals  ( -- )  0 0 (local) ;  immediate
+
+
+\ Submitted by lch.
+: strdup ( c-addr length -- c-addr2 length2 ior )
+	0 locals| addr2 length c-addr | end-locals
+	length 1 + allocate
+	0= if
+		to addr2
+		c-addr addr2 length move
+		addr2 length 0
+	else
+		0  -1
+	endif
+	;
+
+: strcat ( 2:a 2:b -- 2:new-a )
+	0 locals|  b-length b-u b-addr a-u a-addr | end-locals
+	b-u  to b-length
+	b-addr a-addr a-u + b-length  move
+	a-addr a-u b-length +
+	;
+
+: strcpy ( 2:a 2:b -- 2:new-a )
+	locals| b-u b-addr a-u a-addr | end-locals
+	a-addr 0  b-addr b-u  strcat
+	;
+
+[endif]
+
+\ end-of-file
+

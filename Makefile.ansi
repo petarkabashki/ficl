@@ -1,0 +1,70 @@
+# Flags for shared library
+TARGET=  -ansi -DFICL_ANSI  # riscos MOTO_CPU32 
+SHFLAGS = -fPIC
+OPTFLAGS = -O
+LIBM    = -lm
+# MFLAGS  = -DFICL_USE_FDLIBM -Ifdlibm53 -DFICL_USE_STRTOD
+# LIBM    = fdlibm53/libfdm.a
+# DTOAO	  = dtoa.o
+CFLAGS= $(OPTFLAGS) $(SHFLAGS) $(TARGET) $(MFLAGS)
+CC=gcc
+LIB = ar cr
+RANLIB = ranlib
+
+OBJECTS= dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o softcore.o stack.o tools.o vm.o primitives.o bit.o lzuncompress.o ansi.o utility.o hash.o callback.o word.o extras.o bswap.o ficlblas.o xoroshiro128plus.o $(DTOAO)
+HEADERS= ficl.h ficlplatform/ansi.h
+
+MAJOR = 4
+MINOR = 2.0
+
+ficla.exe: $(HEADERS) softcore.c main.o libficl.a
+	$(CC) main.o -o $@ -L. -lficl $(LIBM)
+
+lib: libficl.so.$(MAJOR).$(MINOR)
+
+# static library build
+libficl.a: $(OBJECTS)
+	$(LIB) libficl.a $(OBJECTS)
+	$(RANLIB) libficl.a
+
+# shared library build
+libficl.so.$(MAJOR).$(MINOR): $(OBJECTS)
+	$(CC) -shared -Wl,-soname,libficl.so.$(MAJOR).$(MINOR) \
+	-o libficl.so.$(MAJOR).$(MINOR) $(OBJECTS)
+	ln -sf libficl.so.$(MAJOR).$(MINOR) libficl.so
+
+softcore.c:
+	touch softcore/ficl.fr
+	cd softcore; $(MAKE)
+
+main: main.o ficl.h sysdep.h libficl.so.$(MAJOR).$(MINOR)
+	$(CC) main.o -o main -L. -lficl $(LIBM)
+	ln -sf libficl.so.$(MAJOR).$(MINOR) libficl.so.$(MAJOR)
+
+ansi.o: ficlplatform/ansi.c $(HEADERS)
+	$(CC) $(CFLAGS) -c ficlplatform/ansi.c
+
+#
+#       generic object code
+#
+.SUFFIXES: .cxx .cc .c .o
+
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c
+
+.cxx.o:
+	$(CPP) $(CPFLAGS) -c $*.cxx
+
+.cc.o:
+	$(CPP) $(CPFLAGS) -c $*.cc
+#
+#       generic cleanup code
+#
+clean:
+	$(RM) *.o *.a libficl.*
+	$(RM) ficlplatform.h
+	$(RM) softcore.c
+
+clobber: clean
+	$(RM) ficla.exe
+

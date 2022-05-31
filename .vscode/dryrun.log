@@ -1,0 +1,44 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/johnsmith/work/FORTHS/ficl'
+rm -f ficlplatform.h
+echo "#define FICL_PLATFORM_OS \"`uname`\"" >>ficlplatform.h
+echo "#define FICL_PLATFORM_ARCHITECTURE \"`uname -m`\"" >>ficlplatform.h
+touch softcore/ficl.fr
+cd softcore; /Applications/Xcode.app/Contents/Developer/usr/bin/make
+make[1]: Entering directory `/Users/johnsmith/work/FORTHS/ficl/softcore'
+cc -m64 -Ddarwin -o makesoftcore makesoftcore.c ../lzcompress.c ../bit.c
+./makesoftcore softcore.fr ifbrack.fr prefix.fr ficl.fr jhlocal.fr marker.fr mini-oof.fs ficllocal.fr fileaccess.fr chkredef.fs header.fs srcline.fs toolbelt.fr switch.fr struct.fth sfcompat.fs bitwise.fs circ-pad.fs missing.fs clf.fs floats.fs tester.fr  dshift.fs cond.fs systack.fs strarray.fs strops.fs strconst.f numcvt.fs defer.fth timedate.fs tofcompat.fs ofcompat.fs lose.fs comus.fs tbelt2k.fs words.fs
+make[1]: Leaving directory `/Users/johnsmith/work/FORTHS/ficl/softcore'
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c main.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c dictionary.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c system.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c fileaccess.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c float.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c double.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c prefix.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c search.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c softcore.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c stack.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c tools.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c vm.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c primitives.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c bit.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c lzuncompress.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c ficlplatform/unix.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c utility.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c hash.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c callback.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c word.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c curterm.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c extras.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c bswap.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c ficlblas.c
+cc -Os -fomit-frame-pointer -march=native  -Ddarwin  -wnkB -c xoroshiro128plus.c
+ar cr libficl.a dictionary.o system.o fileaccess.o float.o double.o prefix.o search.o softcore.o stack.o tools.o vm.o primitives.o bit.o lzuncompress.o unix.o utility.o hash.o callback.o word.o curterm.o extras.o bswap.o ficlblas.o xoroshiro128plus.o 
+ranlib libficl.a
+cc main.o -o ficld.exe -L. -lficl -lm
+strip -x -S ficld.exe
+size ficld.exe
+ls -l ficld.exe
+make: Leaving directory `/Users/johnsmith/work/FORTHS/ficl'
+ 

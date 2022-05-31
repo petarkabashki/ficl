@@ -1,0 +1,31 @@
+S" FICL_WANT_FILE" ENVIRONMENT? drop [if]
+\ ** 
+\ ** File Access words for ficl
+\ ** submitted by Larry Hastings, larry@hastings.org
+\ **
+
+: r/o 1 ;
+: r/w 3 ; 
+: w/o 2 ; 
+: bin 8 or ; 
+
+-1 value strict-include
+
+: included
+    2dup r/o bin open-file
+    ?dup if
+        swap drop
+        strict-include if
+            why type ." : " type cr
+            -56 throw
+        then
+        drop 2drop
+    else
+        >r 2drop r>
+        include-file
+    endif
+    ;
+    
+: include parse-word included ;
+
+[endif]
